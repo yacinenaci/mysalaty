@@ -1,0 +1,115 @@
+.salawat {
+    font-family: 'Amiri', serif;
+  
+    color: #070b2c;
+   margin-bottom: 2%;
+   
+    
+    
+    background-color: #ecf0f144;
+    border: 3px solid #4c8bb6b4;
+    border-radius: 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  
+   
+
+     
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    max-width: 30%;
+    
+    
+}
+.salawat h5 {
+    
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 25px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+     text-shadow: 1px 1px 2px rgba(143, 23, 23, 0.904) ;
+    
+    
+}
+.con h1 {
+    
+    text-align: center;
+    color: #5C3E94;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgb(119, 83, 76) ;
+}
+.con {
+   
+ align-items: center;
+    
+    background-image: url('mos.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+select {
+ 
+    font-size: 18px;
+    padding: 8px 12px;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #abdae6;
+    color: #488ccf;
+    box-shadow: 0 2px 4px rgba(209, 68, 68, 0.685);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 29%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+
+   
+} 
+select:hover {
+    border-color: #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}  
+#date {
+    font-family: 'Amiri', serif;
+    text-align: center;
+    color: #34495e;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   box-shadow: 0 0 5px rgba(28, 72, 102, 0.5); 
+}
+.salawat:hover {
+    opacity: 100%;
+    transition: opacity 0.3s ease;
+}
+body {
+   font-family: 'Amiri', serif;
+}
+select option {
+    font-family: 'Amiri', serif;
+    box-shadow: 0 0 5px rgba(70, 140, 187, 0.5); 
+   
+
+}   
