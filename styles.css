@@ -107,10 +107,7 @@ select:focus {
 body {
    font-family: 'Amiri', serif;
     background-image: url('mos.jpg');
-    background-size
-    background-position: center;
-   
-
+    background-size: cover;
 }
 select option {
     font-family: 'Amiri', serif;
@@ -118,3 +115,25 @@ select option {
    
 
 }   
+@media screen {
+    .salawat h5 {
+        font-size: 18px;
+    }
+    select {
+        width: 50%;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .salawat h5 {
+        font-size: 14px;
+    }
+    select {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    
+}
+ 
+
