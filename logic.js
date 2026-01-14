@@ -22,16 +22,8 @@ fetch("https://ipwho.is/")
     countrySelect.value = data.country;
     console.log(data.country);
     updateTimings();
-    
-
-
-
-    
+  
   });
-
-
-
-
 
 
 
