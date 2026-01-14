@@ -67,14 +67,14 @@ select {
     padding: 8px 12px;
     border: 2px solid #2980b9;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 20%;
     background-color: #abdae6;
     color: #488ccf;
     box-shadow: 0 2px 4px rgba(209, 68, 68, 0.685);
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 29%;
+    width: 30%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
