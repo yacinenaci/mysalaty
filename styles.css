@@ -107,7 +107,7 @@ select:focus {
 body {
    font-family: 'Amiri', serif;
     background-image: url('mos.jpg');
-    background-size: cover;
+    background-size:auto;
 }
 select option {
     font-family: 'Amiri', serif;
