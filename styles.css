@@ -95,10 +95,10 @@ select:focus {
 #date {
     font-family: 'Amiri', serif;
     text-align: center;
-    color: #34495e;
+    color: #b93742;
     margin-top: 10px;
     margin-bottom: 10px;
-   box-shadow: 0 0 5px rgba(28, 72, 102, 0.5); 
+   box-shadow: 0 0 5px rgba(175, 195, 208, 0.5); 
 }
 .salawat:hover {
     opacity: 100%;
@@ -132,7 +132,7 @@ select option {
         font-size: 12px;
     }
     select {
-        width: 70%;
+        width: 50%;
         font-size: 14px;
     }
 
