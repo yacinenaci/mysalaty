@@ -13,12 +13,11 @@ date.innerHTML = "Date: " + now.toLocaleDateString();
 
 
 
-fetchCountries();
+fetchCountries()
 
+ 
 
-
-// Get user's country based on IP
-fetch("https://ipwho.is/")
+ fetch("https://ipwho.is/")
   .then(response => response.json())
   .then(data => {
     countrySelect.value = data.country;
@@ -27,6 +26,11 @@ fetch("https://ipwho.is/")
   
   
   });
+  countrySelect.value = currentCountry;
+
+
+// Get user's country based on IP
+
 
 
 
