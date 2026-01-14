@@ -5,6 +5,8 @@ let maghrib = document.getElementById("ma");
 let isha = document.getElementById("is");
 let date = document.getElementById("date");
 let countrySelect = document.getElementById("country");
+let currentCountry = "";
+
 let now = new Date();
 // Display current date 
 date.innerHTML = "Date: " + now.toLocaleDateString();
@@ -20,8 +22,9 @@ fetch("https://ipwho.is/")
   .then(response => response.json())
   .then(data => {
     countrySelect.value = data.country;
+    currentCountry = data.country;
     console.log(data.country);
-    updateTimings();
+  
   
   });
 
@@ -29,7 +32,7 @@ fetch("https://ipwho.is/")
 
 // Function to update prayer timings
   function updateTimings() {
-    fetch("https://api.aladhan.com/v1/timingsByAddress/"+now.toDateString()+"?address=" + countrySelect.value + "&method=3")
+    fetch("https://api.aladhan.com/v1/timingsByAddress/"+now.toDateString()+"?address=" + currentCountry + "&method=3")
       .then(response => response.json())
       .then(data => {
         
@@ -49,7 +52,7 @@ fetch("https://ipwho.is/")
   countrySelect.options[i] = new Option(v.country, v.country);
 
         });
-
+        Option.sortOptions(countrySelect);
     }); 
 }
 countrySelect.addEventListener("change", function() {
