@@ -18,6 +18,8 @@ Promise.all([
    ;
     countrySelect.value = currentCountry;
      updateTimings()
+     countrySelect.value = currentCountry;
+     
   });
 
 
