@@ -12,11 +12,12 @@ let now = new Date();
 date.innerHTML = "Date: " + now.toLocaleDateString();
 console.log(now.toLocaleDateString());
 
-getCountry().then(() => { 
-  updateTimings();
-})
-  fetchCountries();
- 
+
+Promise.all([ 
+  getCountry(),fetchCountries()]).then(() => {
+    updateTimings();
+  });
+
 
 
 // Function to fetch countries 
@@ -46,7 +47,7 @@ function getCountry() {
 
 // Function to update prayer timings
   function updateTimings() {
-    fetch("https://api.aladhan.com/v1/timingsByAddress/"+now.toDateString()+"?address=" + countrySelect.value + "&method=3")
+    return fetch("https://api.aladhan.com/v1/timingsByAddress/"+now.toDateString()+"?address=" + countrySelect.value + "&method=3")
       .then(response => response.json())
       .then(data => {
         
@@ -65,6 +66,6 @@ function getCountry() {
 countrySelect.addEventListener("change", function() {
    
    updateTimings();
-   console.log(countrySelect.value);
+  
     
 });
