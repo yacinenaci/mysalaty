@@ -15,7 +15,9 @@ console.log(now.toLocaleDateString());
 
 Promise.all([ 
   getCountry(),fetchCountries()]).then(() => {
-    updateTimings();
+   ;
+    countrySelect.value = currentCountry;
+     updateTimings()
   });
 
 
