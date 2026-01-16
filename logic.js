@@ -10,14 +10,30 @@ let currentCountry = "";
 let now = new Date();
 // Display current date 
 date.innerHTML = "Date: " + now.toLocaleDateString();
+console.log(now.toLocaleDateString());
 
-
-
-fetchCountries()
-
+getCountry().then(() => { 
+  updateTimings();
+})
+  fetchCountries();
  
 
- fetch("https://ipwho.is/")
+
+// Function to fetch countries 
+   function fetchCountries() {
+    return fetch("https://countriesnow.space/api/v0.1/countries/")
+    .then(response => response.json())
+    .then(data => { data.data.forEach((v, i)=>{
+  countrySelect.options[i] = new Option(v.country, v.country);
+ console.log("Countries loaded");
+        });
+      
+    }); 
+  
+}
+
+function getCountry() {
+   return fetch("https://ipwho.is/")
   .then(response => response.json())
   .then(data => {
     countrySelect.value = data.country;
@@ -26,17 +42,11 @@ fetchCountries()
   
   
   });
-  countrySelect.value = currentCountry;
-
-
-// Get user's country based on IP
-
-
-
+}
 
 // Function to update prayer timings
   function updateTimings() {
-    fetch("https://api.aladhan.com/v1/timingsByAddress/"+now.toDateString()+"?address=" + currentCountry + "&method=3")
+    fetch("https://api.aladhan.com/v1/timingsByAddress/"+now.toDateString()+"?address=" + countrySelect.value + "&method=3")
       .then(response => response.json())
       .then(data => {
         
@@ -45,22 +55,16 @@ fetchCountries()
         asr.innerHTML = data.data.timings.Asr;
         maghrib.innerHTML = data.data.timings.Maghrib;
         isha.innerHTML = data.data.timings.Isha;
+        //console.log(currentCountry+ " 2"); 
       })
+     
   }
 
-// Function to fetch countries 
-  function fetchCountries() {
-  fetch("https://countriesnow.space/api/v0.1/countries/")
-    .then(response => response.json())
-    .then(data => { data.data.forEach((v, i)=>{
-  countrySelect.options[i] = new Option(v.country, v.country);
 
-        });
-        Option.sortOptions(countrySelect);
-    }); 
-}
+
 countrySelect.addEventListener("change", function() {
    
-    updateTimings()
+   updateTimings();
+   console.log(countrySelect.value);
     
 });
