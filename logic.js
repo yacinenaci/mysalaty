@@ -10,16 +10,18 @@ let currentCountry = "";
 let now = new Date();
 // Display current date 
 date.innerHTML = "Date: " + now.toLocaleDateString();
+
 console.log(now.toLocaleDateString());
 
 
 Promise.all([ 
   getCountry(),fetchCountries()]).then(() => {
-   ;
+   
     countrySelect.value = currentCountry;
      updateTimings()
      countrySelect.value = currentCountry;
      
+
   });
 
 
@@ -31,6 +33,7 @@ Promise.all([
     .then(data => { data.data.forEach((v, i)=>{
   countrySelect.options[i] = new Option(v.country, v.country);
  console.log("Countries loaded");
+ countrySelect.value = currentCountry;
         });
       
     }); 
