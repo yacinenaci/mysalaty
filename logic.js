@@ -9,7 +9,7 @@ let currentCountry = "";
 
 let now = new Date();
 // Display current date 
-date.innerHTML = "Date: " + now.toLocaleDateString();
+date.innerHTML = "اليوم : " + now.toLocaleDateString();
 
 console.log(now.toLocaleDateString());
 

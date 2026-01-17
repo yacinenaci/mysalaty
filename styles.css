@@ -29,7 +29,7 @@
     
     margin-right: 5%;
     margin-left: 5%;
-    font-size: 25px;
+    font-size: 35px;
     margin-top: 3%;
     margin-bottom: 3%;
     overflow: hidden;
@@ -121,11 +121,11 @@ select option {
 }   
 @media screen {
     .salawat h5 {
-        font-size: 16px;
+        font-size: 28px;
     }
     select {
         width: 50%;
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 @media screen and (max-width: 768px) {
