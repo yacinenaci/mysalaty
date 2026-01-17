@@ -30,8 +30,8 @@
     margin-right: 5%;
     margin-left: 5%;
     font-size: 35px;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -43,9 +43,9 @@
     
     text-align: center;
     color: #5C3E94;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgb(119, 83, 76) ;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  text-shadow: 1px 1px 2px rgb(119, 83, 76) ;
 }
 .con {
    
@@ -56,7 +56,7 @@
     background-position: center;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(157, 67, 67, 0.1);
     margin-left: auto;
     margin-right: auto;
     
@@ -67,7 +67,7 @@ select {
     padding: 8px 12px;
     border: 2px solid #b5c4ce;
     border-radius: 5px;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     background-color: #d1cfce;
     color: #010100;
     box-shadow: 0 2px 4px rgba(209, 68, 68, 0.685);
@@ -96,9 +96,9 @@ select:focus {
     font-family: 'Amiri', serif;
     text-align: center;
     color: #b93742;
-    margin-top: 10px;
-    margin-bottom: 10px;
-   box-shadow: 0 0 5px rgba(175, 195, 208, 0.5); 
+   margin-top: 1%;
+    margin-bottom: 1%;
+   
 }
 .salawat:hover {
     opacity: 100%;
@@ -121,7 +121,7 @@ select option {
 }   
 @media screen {
     .salawat h5 {
-        font-size: 28px;
+        font-size: 24px;
     }
     select {
         width: 50%;
