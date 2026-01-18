@@ -5,6 +5,7 @@ let maghrib = document.getElementById("ma");
 let isha = document.getElementById("is");
 let date = document.getElementById("date");
 let countrySelect = document.getElementById("country");
+let content = document.getElementById("cont");
 let currentCountry = "";
 
 let now = new Date();
@@ -13,7 +14,7 @@ date.innerHTML = "اليوم : " + now.toLocaleDateString();
 
 console.log(now.toLocaleDateString());
 
-
+function playAll() {
 Promise.all([ 
   getCountry(),fetchCountries()]).then(() => {
    
@@ -23,6 +24,22 @@ Promise.all([
      
 
   });
+
+}
+
+//playAll();
+
+async function play() {
+  content.style.display = "none";
+  await playAll();
+ 
+  content.style.display = "block";
+  
+  
+  
+}
+play();
+
 
 
 
